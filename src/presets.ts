@@ -53,9 +53,10 @@ export const builtinVariants: Record<Scaffold, Record<string, BuiltinVariant>> =
       name: "openrouter",
       description: "OpenRouter API",
       env: {
-        ANTHROPIC_BASE_URL: "https://openrouter.ai/api/v1",
+        ANTHROPIC_BASE_URL: "https://openrouter.ai/api",
+        ANTHROPIC_API_KEY: "",
       },
-      requiredEnvVars: ["ANTHROPIC_API_KEY"],
+      requiredEnvVars: ["ANTHROPIC_AUTH_TOKEN"],
     },
     azure: {
       name: "azure",

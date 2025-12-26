@@ -147,7 +147,7 @@ const ENV_VAR_HELP: Record<string, string> = {
   "glm:ANTHROPIC_AUTH_TOKEN": "Get from https://z.ai/manage-apikey/apikey-list",
   "minimax:ANTHROPIC_AUTH_TOKEN": "Get from https://platform.minimax.io/user-center/basic-information/interface-key",
   "kimi:ANTHROPIC_AUTH_TOKEN": "Get from https://platform.moonshot.cn/console/api-keys",
-  "openrouter:ANTHROPIC_API_KEY": "Get from https://openrouter.ai/settings/keys",
+  "openrouter:ANTHROPIC_AUTH_TOKEN": "Get from https://openrouter.ai/settings/keys",
   "vertex:ANTHROPIC_VERTEX_PROJECT_ID": "Your GCP project ID (run: gcloud config get-value project)",
 
   // Generic fallbacks
@@ -204,7 +204,7 @@ function printMissingEnvVarsError(scaffold: Scaffold, variant: string | null, mi
 }
 
 async function showAuthTargets(): Promise<void> {
-  console.log("\x1b[1mAvailable auth targets:\x1b[0m\n");
+  console.log("\x1b[1mAuth targets:\x1b[0m\n");
 
   for (const scaffold of SCAFFOLDS) {
     const variants = await getAllVariants(scaffold);
@@ -212,8 +212,12 @@ async function showAuthTargets(): Promise<void> {
     for (const [name, variant] of Object.entries(variants)) {
       if (variant.requiredEnvVars && variant.requiredEnvVars.length > 0) {
         const target = `${scaffold}.${name}`;
-        const envVars = variant.requiredEnvVars.join(", ");
-        console.log(`  \x1b[36m${target}\x1b[0m  \x1b[90m${envVars}\x1b[0m`);
+        const auth = await getAuth(target);
+        const allSet = variant.requiredEnvVars.every(
+          (v) => process.env[v] || auth[v]
+        );
+        const status = allSet ? "\x1b[32m✓\x1b[0m" : "\x1b[90m○\x1b[0m";
+        console.log(`  ${status} \x1b[36m${target}\x1b[0m`);
       }
     }
   }

@@ -1,8 +1,8 @@
-# coderouter
+<h1 align="center">coderouter</h1>
 
-CLI for running Claude Code on GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP Vertex, and more.
+<p align="center">CLI for running Claude Code on GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP Vertex, and more.</p>
 
-No more juggling environment variables or hot swapping `~/.claude/settings.json` just to switch providers.
+<p align="center">No more juggling environment variables or hot swapping <code>~/.claude/settings.json</code> just to switch providers.</p>
 
 ```bash
 cr claude.glm "fix the tests"
@@ -43,7 +43,7 @@ cr claude.openrouter    # OpenRouter
 | Z.AI GLM-4.7 | `cr claude.glm` | API key from [z.ai](https://z.ai/manage-apikey/apikey-list) |
 | MiniMax M2.1 | `cr claude.minimax` | API key from [minimax.io](https://platform.minimax.io/user-center/basic-information/interface-key) |
 | Kimi K2 | `cr claude.kimi` | API key from [moonshot.cn](https://platform.moonshot.cn/console/api-keys) |
-| OpenRouter | `cr claude.openrouter` | API key from [openrouter.ai](https://openrouter.ai/settings/keys) |
+| OpenRouter | `cr claude.openrouter` | `cr auth claude.openrouter` |
 
 ## How it works
 

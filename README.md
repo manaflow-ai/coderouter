@@ -37,13 +37,13 @@ cr claude.openrouter    # OpenRouter
 
 | Provider | Command | Auth |
 |----------|---------|------|
-| AWS Bedrock | `cr claude.aws` | AWS credentials |
-| GCP Vertex | `cr claude.vertex` | `gcloud auth login` + project ID |
-| Azure Foundry | `cr claude.azure` | `az login` or API key |
 | Z.AI GLM-4.7 | `cr claude.glm` | API key from [z.ai](https://z.ai/manage-apikey/apikey-list) |
 | MiniMax M2.1 | `cr claude.minimax` | API key from [minimax.io](https://platform.minimax.io/user-center/basic-information/interface-key) |
 | Kimi K2 | `cr claude.kimi` | API key from [moonshot.cn](https://platform.moonshot.cn/console/api-keys) |
 | OpenRouter | `cr claude.openrouter` | `cr auth claude.openrouter` |
+| AWS Bedrock | `cr claude.aws` | AWS credentials |
+| GCP Vertex | `cr claude.vertex` | `gcloud auth login` + project ID |
+| Azure Foundry | `cr claude.azure` | `az login` or API key |
 
 ## OpenCode
 

@@ -19,8 +19,9 @@ npm install -g coderouter
 ## Usage
 
 ```bash
-cr auth claude.glm      # prompts for API key, saves it
-cr claude.glm "fix the tests"
+cr auth claude.glm                                  # prompts for API key, saves it
+cr claude.glm "fix the tests"                       # run with prompt
+cr claude.glm --dangerously-skip-permissions        # all claude flags work
 ```
 
 ```bash

@@ -45,6 +45,17 @@ cr claude.openrouter    # OpenRouter
 | Kimi K2 | `cr claude.kimi` | API key from [moonshot.cn](https://platform.moonshot.cn/console/api-keys) |
 | OpenRouter | `cr claude.openrouter` | `cr auth claude.openrouter` |
 
+## OpenCode
+
+Switch between vanilla opencode and [oh-my-opencode](https://github.com/code-yeongyu/oh-my-opencode):
+
+```bash
+cr opencode             # vanilla opencode
+cr opencode.omoc        # oh-my-opencode
+```
+
+Each uses a separate config directory (`~/.config/coderouter/opencode-vanilla/` and `~/.config/coderouter/opencode-omoc/`).
+
 ## How it works
 
 `cr claude.aws` sets `CLAUDE_CODE_USE_BEDROCK=1` and runs `claude`.

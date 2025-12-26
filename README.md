@@ -58,6 +58,13 @@ Each uses a separate config directory (`~/.config/coderouter/opencode-vanilla/` 
 
 ## How it works
 
+All flags pass through to the underlying CLI:
+
+```bash
+cr claude.glm "fix the tests" --dangerously-skip-permissions --model sonnet -p
+# runs: claude "fix the tests" --dangerously-skip-permissions --model sonnet -p
+```
+
 Each command sets env vars and runs `claude`:
 
 ```bash

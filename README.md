@@ -1,6 +1,6 @@
 # coderouter
 
-CLI for running Claude Code on GLM-4.7, MiniMax M2.1, AWS Bedrock, GCP Vertex, and more.
+CLI for running Claude Code on GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP Vertex, and more.
 
 ```bash
 cr claude.glm "fix the tests"
@@ -17,12 +17,12 @@ npm install -g coderouter
 ## Usage
 
 ```bash
-cr claude.aws           # AWS Bedrock
-cr claude.vertex        # Google Cloud Vertex AI
-cr claude.azure         # Microsoft Azure Foundry
 cr claude.glm           # Z.AI GLM-4.7
 cr claude.minimax       # MiniMax M2.1
 cr claude.kimi          # Moonshot Kimi K2
+cr claude.aws           # AWS Bedrock
+cr claude.vertex        # Google Cloud Vertex AI
+cr claude.azure         # Microsoft Azure Foundry
 cr claude.openrouter    # OpenRouter
 ```
 

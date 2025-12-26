@@ -1,8 +1,8 @@
 <h1 align="center">coderouter</h1>
 
-<p align="center">CLI for running Claude Code on GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP Vertex, and more.</p>
+CLI for running Claude Code on GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP Vertex, and more.
 
-<p align="center">No more juggling environment variables or hot swapping <code>~/.claude/settings.json</code> just to switch providers.</p>
+No more juggling environment variables or hot swapping `~/.claude/settings.json` just to switch providers.
 
 ```bash
 cr claude.glm "fix the tests"

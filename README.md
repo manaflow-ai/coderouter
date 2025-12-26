@@ -1,6 +1,6 @@
 <h1 align="center">coderouter</h1>
 
-CLI for running Claude Code on GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP Vertex, and more.
+CLI for running Claude Code with GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP Vertex, and more.
 
 No more juggling environment variables or hot swapping `~/.claude/settings.json` just to switch providers.
 
@@ -58,7 +58,44 @@ Each uses a separate config directory (`~/.config/coderouter/opencode-vanilla/` 
 
 ## How it works
 
-`cr claude.aws` sets `CLAUDE_CODE_USE_BEDROCK=1` and runs `claude`.
+Each command sets env vars and runs `claude`:
+
+```bash
+# cr claude.aws
+CLAUDE_CODE_USE_BEDROCK=1
+AWS_REGION=us-west-1
+ANTHROPIC_MODEL=global.anthropic.claude-opus-4-5-20251101-v1:0
+ANTHROPIC_SMALL_FAST_MODEL=us.anthropic.claude-haiku-4-5-20251001-v1:0
+
+# cr claude.vertex
+CLAUDE_CODE_USE_VERTEX=1
+CLOUD_ML_REGION=global
+ANTHROPIC_MODEL=claude-opus-4-5@20251101
+ANTHROPIC_SMALL_FAST_MODEL=claude-haiku-4-5@20251001
+
+# cr claude.glm
+ANTHROPIC_BASE_URL=https://api.z.ai/api/anthropic
+ANTHROPIC_DEFAULT_OPUS_MODEL=glm-4.7
+ANTHROPIC_DEFAULT_SONNET_MODEL=glm-4.7
+ANTHROPIC_DEFAULT_HAIKU_MODEL=glm-4.5-air
+
+# cr claude.minimax
+ANTHROPIC_BASE_URL=https://api.minimax.io/anthropic
+ANTHROPIC_MODEL=MiniMax-M2.1
+ANTHROPIC_SMALL_FAST_MODEL=MiniMax-M2.1
+CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1
+API_TIMEOUT_MS=3000000
+
+# cr claude.kimi
+ANTHROPIC_BASE_URL=https://api.moonshot.ai/anthropic
+ANTHROPIC_MODEL=kimi-k2-thinking-turbo
+
+# cr claude.openrouter
+ANTHROPIC_BASE_URL=https://openrouter.ai/api
+
+# cr claude.azure
+CLAUDE_CODE_USE_FOUNDRY=1
+```
 
 Config at `~/.config/coderouter/config.json`.
 

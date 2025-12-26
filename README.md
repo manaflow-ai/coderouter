@@ -14,8 +14,6 @@ cr claude.vertex
 npm install -g coderouter
 ```
 
-Requires [Claude Code](https://docs.anthropic.com/en/docs/claude-code) installed separately.
-
 ## Usage
 
 ```bash

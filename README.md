@@ -17,6 +17,11 @@ npm install -g coderouter
 ## Usage
 
 ```bash
+cr auth claude.glm      # prompts for API key, saves it
+cr claude.glm "fix the tests"
+```
+
+```bash
 cr claude.glm           # Z.AI GLM-4.7
 cr claude.minimax       # MiniMax M2.1
 cr claude.kimi          # Moonshot Kimi K2
@@ -24,13 +29,6 @@ cr claude.aws           # AWS Bedrock
 cr claude.vertex        # Google Cloud Vertex AI
 cr claude.azure         # Microsoft Azure Foundry
 cr claude.openrouter    # OpenRouter
-```
-
-Set up credentials:
-
-```bash
-cr auth claude.glm      # prompts for API key, saves it
-cr auth                 # list all auth targets
 ```
 
 ## Providers

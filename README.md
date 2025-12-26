@@ -47,7 +47,7 @@ cr auth                 # list all auth targets
 
 ## How it works
 
-`cr claude.aws` sets `CLAUDE_CODE_USE_BEDROCK=1` and runs `claude`. That's it.
+`cr claude.aws` sets `CLAUDE_CODE_USE_BEDROCK=1` and runs `claude`.
 
 Config at `~/.config/coderouter/config.json`.
 

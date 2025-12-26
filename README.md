@@ -5,9 +5,9 @@ CLI for running Claude Code on GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP 
 No more juggling environment variables or hot swapping `~/.claude/settings.json` just to switch providers.
 
 ```bash
-cr claude.glm "fix the tests"
-cr claude.aws --dangerously-skip-permissions
-cr claude.vertex
+cr claude.glm "fix the tests"      # runs glm-4.7
+cr claude.minimax                   # runs MiniMax-M2.1
+cr claude.aws                       # runs claude-opus-4-5 on Bedrock
 ```
 
 ## Install

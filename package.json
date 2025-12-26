@@ -1,0 +1,42 @@
+{
+  "name": "coderouter",
+  "version": "0.0.5",
+  "description": "Route between AI coding CLIs. One command, any provider.",
+  "type": "module",
+  "scripts": {
+    "cr": "bun run src/cli.ts",
+    "build": "bun build src/cli.ts --outfile dist/cli.js --target node --minify && sed -i '' '1s/bun/node/' dist/cli.js",
+    "prepublishOnly": "bun run build"
+  },
+  "bin": {
+    "coderouter": "./dist/cli.js",
+    "cr": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "cli",
+    "claude",
+    "opencode",
+    "codex",
+    "gemini",
+    "ai",
+    "coding-assistant",
+    "bedrock",
+    "vertex",
+    "anthropic",
+    "openai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0"
+  }
+}

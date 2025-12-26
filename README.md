@@ -2,7 +2,7 @@
 
 CLI for running Claude Code with GLM-4.7, MiniMax M2.1, Kimi K2, AWS Bedrock, GCP Vertex, and more.
 
-[![asciicast](https://asciinema.org/a/5jbd3mcxfZZJnFHR7niaprleI.svg)](https://asciinema.org/a/5jbd3mcxfZZJnFHR7niaprleI)
+[![asciicast](https://asciinema.org/a/tGM8Z1tWHC78oTKafFWUuyhJK.svg)](https://asciinema.org/a/tGM8Z1tWHC78oTKafFWUuyhJK)
 
 No more juggling environment variables or hot swapping `~/.claude/settings.json` just to switch providers.
 
